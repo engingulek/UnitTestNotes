@@ -74,6 +74,46 @@ final class UnitTestExampleTests: XCTestCase {
     }
     
     
+    func testOptional() throws {
+        let optionalValue : Int? = 10
+        let unwrappedValue = try XCTUnwrap(optionalValue)
+        XCTAssertEqual(unwrappedValue, 10)
+    }
+    
+    func testOptionalWithoutUnwrap() throws {
+        let optionalValue: Int? = nil
+        XCTAssertEqual(optionalValue, 10)
+    }
+    
+    /* bu yalnızca bir değer iddia etmemiz gerekiyorsa harika çalışır. Bununla birlikte isteğe bağlı bir örnekte
+     özellikler için iddiada bulunacak olsaydınız, örnekte sıfır olduğu için birden fazla başarısız iddiayla sonuçlanabilirsiniz
+    
+     */
+    
+   /* func testPersonValues()  {
+        let optinalPerson : Person? = nil
+        XCTAssertEqual(optinalPerson?.name, "Engin")
+        XCTAssertEqual(optinalPerson?.age, 23)
+    }*/
+    
+    func testPersonValues1() throws {
+        let optinalPerson : Person? = Person(name: "Engin", age: 10)
+        let unwrappedPerson = try XCTUnwrap(optinalPerson)
+        XCTAssertEqual(unwrappedPerson.name, "Engin")
+        XCTAssertEqual(unwrappedPerson.age, 10)
+    }
+    // İsteğe bağlı seçenekleri test ederken sıklıkla karşılaştığımız başka bir sorun da XCTAssertTrue veya XCTAssert False'ın isteğe bağlı seçeneklerle çalışmamasıdır:
+    
+    func testOptinolBool() throws {
+        let optinalBool : Bool? = true
+       // XCTAssertTrue(optinalBool)
+        XCTAssertTrue(optinalBool == true)
+        XCTAssert(optinalBool == true)
+    }
+    
+    // Özel kodu doğrulamak için bir çözüm olarak Dependency injection
+   // belirli bir örneğin sahte bir sürümünü enjekte ederek özel kodu doğrulamayı mümkün kılar.
+    //  Bizim durumumuzda bu, Tracker örneğimizin sahte bir sürümünü oluşturmak anlamına gelir.
 
     func testPerformanceExample() throws {
         // This is an example of a performance test case.
