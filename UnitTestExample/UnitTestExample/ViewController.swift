@@ -12,6 +12,10 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         print(input.upperCasedFirst())
+        
+        let ferrari = Car(type: .Sport, transmissionMode: .Drive)
+        ferrari.start(minutes: 120)
+        print(ferrari.miles)
     }
 
 
