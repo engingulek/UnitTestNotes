@@ -13,7 +13,7 @@ import XCTest
 
 final class UnitTestExampleTests: XCTestCase {
 
-    var vc : ViewController!
+
     private var userDefaults : UserDefaults!
     private var userDefaultsSuitName : String!
     
