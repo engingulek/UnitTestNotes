@@ -35,6 +35,13 @@
 		7D454D1D2A25215000C488BE /* Coupon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D454D1C2A25215000C488BE /* Coupon.swift */; };
 		7D454D1F2A2523A900C488BE /* PriceCalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D454D1E2A2523A800C488BE /* PriceCalculatorTests.swift */; };
 		7D454D212A25297100C488BE /* CheckoutPageOpenerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D454D202A25297100C488BE /* CheckoutPageOpenerMock.swift */; };
+		7D454D242A252C6F00C488BE /* SendMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D454D232A252C6F00C488BE /* SendMessageView.swift */; };
+		7D454D262A252CA100C488BE /* MessageSender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D454D252A252CA100C488BE /* MessageSender.swift */; };
+		7D454D292A252F0100C488BE /* SendMessageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D454D282A252F0100C488BE /* SendMessageViewModel.swift */; };
+		7D454D2B2A25327F00C488BE /* MessageSenderMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D454D2A2A25327F00C488BE /* MessageSenderMock.swift */; };
+		7D454D2E2A25347A00C488BE /* XCTestCase+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D454D2C2A25335800C488BE /* XCTestCase+Extension.swift */; };
+		7D454D302A25350900C488BE /* SendMessageViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D454D2F2A25350900C488BE /* SendMessageViewModelTests.swift */; };
+		7D454D332A25391B00C488BE /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D454D322A25391B00C488BE /* NetworkManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +94,13 @@
 		7D454D1C2A25215000C488BE /* Coupon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coupon.swift; sourceTree = "<group>"; };
 		7D454D1E2A2523A800C488BE /* PriceCalculatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceCalculatorTests.swift; sourceTree = "<group>"; };
 		7D454D202A25297100C488BE /* CheckoutPageOpenerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutPageOpenerMock.swift; sourceTree = "<group>"; };
+		7D454D232A252C6F00C488BE /* SendMessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendMessageView.swift; sourceTree = "<group>"; };
+		7D454D252A252CA100C488BE /* MessageSender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageSender.swift; sourceTree = "<group>"; };
+		7D454D282A252F0100C488BE /* SendMessageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendMessageViewModel.swift; sourceTree = "<group>"; };
+		7D454D2A2A25327F00C488BE /* MessageSenderMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageSenderMock.swift; sourceTree = "<group>"; };
+		7D454D2C2A25335800C488BE /* XCTestCase+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+Extension.swift"; sourceTree = "<group>"; };
+		7D454D2F2A25350900C488BE /* SendMessageViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendMessageViewModelTests.swift; sourceTree = "<group>"; };
+		7D454D322A25391B00C488BE /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +151,8 @@
 		7D454CC52A2289CC00C488BE /* UnitTestExample */ = {
 			isa = PBXGroup;
 			children = (
+				7D454D272A252EB400C488BE /* viewModel */,
+				7D454D222A252C3D00C488BE /* model */,
 				7D454CC62A2289CC00C488BE /* AppDelegate.swift */,
 				7D454CC82A2289CC00C488BE /* SceneDelegate.swift */,
 				7D454CCA2A2289CC00C488BE /* ViewController.swift */,
@@ -146,14 +162,11 @@
 				7D454CD42A2289CE00C488BE /* Info.plist */,
 				7D454CF62A228BE800C488BE /* Extension.swift */,
 				7D454CF82A22900000C488BE /* SearchQueryCache.swift */,
-				7D454CFA2A22938800C488BE /* Product.swift */,
-				7D454CFE2A23861800C488BE /* Person.swift */,
 				7D454D002A238DB200C488BE /* Tracker.swift */,
-				7D454D062A249C8600C488BE /* Car.swift */,
 				7D454D102A24BB6200C488BE /* NetworkMonitor.swift */,
 				7D454D182A2520E400C488BE /* ShoppingCart.swift */,
 				7D454D1A2A25213900C488BE /* PriceCalculator.swift */,
-				7D454D1C2A25215000C488BE /* Coupon.swift */,
+				7D454D232A252C6F00C488BE /* SendMessageView.swift */,
 			);
 			path = UnitTestExample;
 			sourceTree = "<group>";
@@ -161,16 +174,18 @@
 		7D454CDC2A2289CE00C488BE /* UnitTestExampleTests */ = {
 			isa = PBXGroup;
 			children = (
+				7D454D312A2538ED00C488BE /* Mock */,
 				7D454D122A24BDAC00C488BE /* TestThree.swift */,
 				7D454CDD2A2289CE00C488BE /* UnitTestExampleTests.swift */,
 				7D454D022A238FA300C488BE /* MockedTracker.swift */,
 				7D454D042A23914400C488BE /* SessionMonitorTests.swift */,
 				7D454D082A249D3200C488BE /* CarTest.swift */,
 				7D454D0A2A24A48000C488BE /* TestTwo.swift */,
+				7D454D2C2A25335800C488BE /* XCTestCase+Extension.swift */,
 				7D454D0E2A24AF2200C488BE /* TestSlowTests.swift */,
 				7D454D142A24BFC200C488BE /* MockUserDefaults.swift */,
 				7D454D1E2A2523A800C488BE /* PriceCalculatorTests.swift */,
-				7D454D202A25297100C488BE /* CheckoutPageOpenerMock.swift */,
+				7D454D2F2A25350900C488BE /* SendMessageViewModelTests.swift */,
 			);
 			path = UnitTestExampleTests;
 			sourceTree = "<group>";
@@ -182,6 +197,36 @@
 				7D454CE92A2289CE00C488BE /* UnitTestExampleUITestsLaunchTests.swift */,
 			);
 			path = UnitTestExampleUITests;
+			sourceTree = "<group>";
+		};
+		7D454D222A252C3D00C488BE /* model */ = {
+			isa = PBXGroup;
+			children = (
+				7D454D062A249C8600C488BE /* Car.swift */,
+				7D454D1C2A25215000C488BE /* Coupon.swift */,
+				7D454CFA2A22938800C488BE /* Product.swift */,
+				7D454CFE2A23861800C488BE /* Person.swift */,
+				7D454D252A252CA100C488BE /* MessageSender.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		7D454D272A252EB400C488BE /* viewModel */ = {
+			isa = PBXGroup;
+			children = (
+				7D454D282A252F0100C488BE /* SendMessageViewModel.swift */,
+				7D454D322A25391B00C488BE /* NetworkManager.swift */,
+			);
+			path = viewModel;
+			sourceTree = "<group>";
+		};
+		7D454D312A2538ED00C488BE /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				7D454D202A25297100C488BE /* CheckoutPageOpenerMock.swift */,
+				7D454D2A2A25327F00C488BE /* MessageSenderMock.swift */,
+			);
+			path = Mock;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -315,13 +360,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D454D292A252F0100C488BE /* SendMessageViewModel.swift in Sources */,
 				7D454CCB2A2289CC00C488BE /* ViewController.swift in Sources */,
 				7D454CC72A2289CC00C488BE /* AppDelegate.swift in Sources */,
 				7D454D1D2A25215000C488BE /* Coupon.swift in Sources */,
 				7D454CF92A22900000C488BE /* SearchQueryCache.swift in Sources */,
 				7D454CC92A2289CC00C488BE /* SceneDelegate.swift in Sources */,
 				7D454D012A238DB200C488BE /* Tracker.swift in Sources */,
+				7D454D242A252C6F00C488BE /* SendMessageView.swift in Sources */,
+				7D454D262A252CA100C488BE /* MessageSender.swift in Sources */,
 				7D454D192A2520E400C488BE /* ShoppingCart.swift in Sources */,
+				7D454D332A25391B00C488BE /* NetworkManager.swift in Sources */,
 				7D454D072A249C8600C488BE /* Car.swift in Sources */,
 				7D454CFF2A23861800C488BE /* Person.swift in Sources */,
 				7D454D112A24BB6200C488BE /* NetworkMonitor.swift in Sources */,
@@ -335,7 +384,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D454D2E2A25347A00C488BE /* XCTestCase+Extension.swift in Sources */,
 				7D454CDE2A2289CE00C488BE /* UnitTestExampleTests.swift in Sources */,
+				7D454D302A25350900C488BE /* SendMessageViewModelTests.swift in Sources */,
 				7D454D052A23914400C488BE /* SessionMonitorTests.swift in Sources */,
 				7D454D152A24BFC200C488BE /* MockUserDefaults.swift in Sources */,
 				7D454D0F2A24AF2200C488BE /* TestSlowTests.swift in Sources */,
@@ -343,6 +394,7 @@
 				7D454D212A25297100C488BE /* CheckoutPageOpenerMock.swift in Sources */,
 				7D454D032A238FA300C488BE /* MockedTracker.swift in Sources */,
 				7D454D1F2A2523A900C488BE /* PriceCalculatorTests.swift in Sources */,
+				7D454D2B2A25327F00C488BE /* MessageSenderMock.swift in Sources */,
 				7D454D132A24BDAC00C488BE /* TestThree.swift in Sources */,
 				7D454D0B2A24A48000C488BE /* TestTwo.swift in Sources */,
 			);
