@@ -41,7 +41,8 @@
 		7D454D2B2A25327F00C488BE /* MessageSenderMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D454D2A2A25327F00C488BE /* MessageSenderMock.swift */; };
 		7D454D2E2A25347A00C488BE /* XCTestCase+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D454D2C2A25335800C488BE /* XCTestCase+Extension.swift */; };
 		7D454D302A25350900C488BE /* SendMessageViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D454D2F2A25350900C488BE /* SendMessageViewModelTests.swift */; };
-		7D454D332A25391B00C488BE /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D454D322A25391B00C488BE /* NetworkManager.swift */; };
+		7D454D352A253A4000C488BE /* NetworkSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D454D342A253A4000C488BE /* NetworkSession.swift */; };
+		7D454D372A253B2200C488BE /* NetworkSessionMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D454D362A253B2200C488BE /* NetworkSessionMock.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,7 +101,8 @@
 		7D454D2A2A25327F00C488BE /* MessageSenderMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageSenderMock.swift; sourceTree = "<group>"; };
 		7D454D2C2A25335800C488BE /* XCTestCase+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+Extension.swift"; sourceTree = "<group>"; };
 		7D454D2F2A25350900C488BE /* SendMessageViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendMessageViewModelTests.swift; sourceTree = "<group>"; };
-		7D454D322A25391B00C488BE /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		7D454D342A253A4000C488BE /* NetworkSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkSession.swift; sourceTree = "<group>"; };
+		7D454D362A253B2200C488BE /* NetworkSessionMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkSessionMock.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +169,7 @@
 				7D454D182A2520E400C488BE /* ShoppingCart.swift */,
 				7D454D1A2A25213900C488BE /* PriceCalculator.swift */,
 				7D454D232A252C6F00C488BE /* SendMessageView.swift */,
+				7D454D342A253A4000C488BE /* NetworkSession.swift */,
 			);
 			path = UnitTestExample;
 			sourceTree = "<group>";
@@ -215,7 +218,6 @@
 			isa = PBXGroup;
 			children = (
 				7D454D282A252F0100C488BE /* SendMessageViewModel.swift */,
-				7D454D322A25391B00C488BE /* NetworkManager.swift */,
 			);
 			path = viewModel;
 			sourceTree = "<group>";
@@ -225,6 +227,7 @@
 			children = (
 				7D454D202A25297100C488BE /* CheckoutPageOpenerMock.swift */,
 				7D454D2A2A25327F00C488BE /* MessageSenderMock.swift */,
+				7D454D362A253B2200C488BE /* NetworkSessionMock.swift */,
 			);
 			path = Mock;
 			sourceTree = "<group>";
@@ -370,10 +373,10 @@
 				7D454D242A252C6F00C488BE /* SendMessageView.swift in Sources */,
 				7D454D262A252CA100C488BE /* MessageSender.swift in Sources */,
 				7D454D192A2520E400C488BE /* ShoppingCart.swift in Sources */,
-				7D454D332A25391B00C488BE /* NetworkManager.swift in Sources */,
 				7D454D072A249C8600C488BE /* Car.swift in Sources */,
 				7D454CFF2A23861800C488BE /* Person.swift in Sources */,
 				7D454D112A24BB6200C488BE /* NetworkMonitor.swift in Sources */,
+				7D454D352A253A4000C488BE /* NetworkSession.swift in Sources */,
 				7D454D1B2A25213900C488BE /* PriceCalculator.swift in Sources */,
 				7D454CF72A228BE800C488BE /* Extension.swift in Sources */,
 				7D454CFB2A22938800C488BE /* Product.swift in Sources */,
@@ -391,6 +394,7 @@
 				7D454D152A24BFC200C488BE /* MockUserDefaults.swift in Sources */,
 				7D454D0F2A24AF2200C488BE /* TestSlowTests.swift in Sources */,
 				7D454D092A249D3200C488BE /* CarTest.swift in Sources */,
+				7D454D372A253B2200C488BE /* NetworkSessionMock.swift in Sources */,
 				7D454D212A25297100C488BE /* CheckoutPageOpenerMock.swift in Sources */,
 				7D454D032A238FA300C488BE /* MockedTracker.swift in Sources */,
 				7D454D1F2A2523A900C488BE /* PriceCalculatorTests.swift in Sources */,
