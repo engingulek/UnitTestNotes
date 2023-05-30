@@ -1,0 +1,68 @@
+//
+
+
+Test yazarken unwrap kullanmka yerine guard let kullanılması daha iyi olacaktır.
+
+
+ İsteğe bağlı yok, zorla açma yok ve bir şeyin başarısız olmaya başlaması durumunda mükemmel tanılama
+ func testSearchURLContainsQuery() throws {
+     let factory = EndpointURLFactory()
+     let query = "Swift"
+     // Since our test function is throwing, we can simply use 'try' here
+     let url = try factory.makeURL(for: .search(query))
+     XCTAssertTrue(url.absoluteString.contains(query))
+     
+ }
+
+
+
+
+ kullanıcı girişi yaparken sayfa geçişinde animasyonların olması testin hatalı çıkmasına neden olacaktır.
+
+
+Animasyon durumlarınd ise geçilen sayfada bulunan bir görsel nesnein gözükmesini bekleyebilirsi
+
+
+func testLoggingIn() {
+    let app = XCUIApplication()
+
+    // Fill in login credentials
+    let emailTextField = app.textFields["Email"]
+    emailTextField.tap()
+    emailTextField.typeText("hello@test-account.com")
+
+    let passwordTextField = app.secureTextFields["Password"]
+    passwordTextField.tap()
+    passwordTextField.typeText("password")
+
+    // Tap the login button
+    app.buttons["Login"].tap()
+
+    // Make sure the user's profile is shown
+    wait(forElement: app.staticTexts["Your profile"], timeout: 5)
+}
+
+
+extension XCTestCase {
+    func wait(forElement element: XCUIElement, timeout: TimeInterval) {
+        let predicate = NSPredicate(format: "exists == 1")
+
+        // This will make the test runner continously evalulate the
+        // predicate, and wait until it matches.
+        expectation(for: predicate, evaluatedWith: element)
+        waitForExpectations(timeout: timeout)
+    }
+}
+
+
+
+
+Birim testlerinde veriler iki farklı amaç için kullanılır.
+1. Söz konusu veriler test sonucu için önemli olmasa bile belirli bir API gereksinimini karşılamak
+2. Test ettiğimiz kodun sonucunu doğrulamanın bir yolunu sağlamak.
+
+
+
+
+
+
